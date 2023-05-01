@@ -5,6 +5,10 @@ html, body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+ }
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -46,6 +50,17 @@ img.logo {
   height: 70px;
   margin-left: 30px;
   grid-area: logo;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+
+@keyframes example {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(90deg);}
+  60% {transform: rotate(70deg);}
+  100% {transform: rotate(360deg);}
 }
 
 h1 {
@@ -252,6 +267,7 @@ img.leftblob{
 }
 
 .poster-dl{
+  text-decoration: none;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
@@ -263,6 +279,12 @@ img.leftblob{
   border-style: solid;
   position: relative;
   transition-duration: 0.2s;
+}
+
+a.pd {
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
 }
 
 .poster-dl:hover{
@@ -289,16 +311,18 @@ transition-duration: 0.2s;
   padding: 40px;
 }
 
-@media only screen and(min-width: 1300px) {
-  .realimg{ content:url(); visibility: hidden;width: 0px;height: 0px;}
+@media only screen and (min-width: 1300px) {
+  img.realimg {
+    visibility: hidden;
+  }
   div.spacerwhite{ visibility: hidden;width: 0px;height: 0px;}
 }
 
 
-@media only screen and (max-width: 1300px) and (min-width: 455px) {
+@media only screen and (max-width: 1400px) and (min-width: 451px) {
   .navbar {
   display: grid; 
-  grid-template-columns: 1fr 70% 1fr; 
+  grid-template-columns: 1fr 60% 1fr; 
   grid-template-rows: 1fr; 
   gap: 0px 0px; 
   align-items: center;
@@ -309,30 +333,35 @@ transition-duration: 0.2s;
   button.takeaction {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    width: 140;
-    height: 40;
+    width: 170px;
+    height: 50px;
     background-color: #111111;
     color: white;
-    font-size: 17px;
-    border-style: solid;
+    font-size: 24px;
+    border-style: solid black;
     grid-area: button;
-    margin-right: 100px;
+    margin-right: 10px;
     position: relative;
     transition-duration: 0.2s;
+    box-shadow: none;
+    padding: 0;
+    border: none;
   }
   
   button.takeaction:hover{
-    -webkit-box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.75);
   transition-duration: 0.2s;
   }
   
   img.logo {
-    width: 55px;
-    height: 70px;
+    width: 85px;
+    height: 100px;
     margin-left: 30px;
+    margin-top: 30px;
     grid-area: logo;
+    animation-duration: 0s;
   }
   
   .SplashWrapper {
@@ -613,13 +642,15 @@ transition-duration: 0.2s;
   }
 }
 
+
 /* MOBILE */
 
-@media only screen and (max-width: 450px) and (min-width: 10px) {
+
+@media only screen and (max-device-width: 450px) {
 
   .navbar {
   display: grid; 
-  grid-template-columns: 1fr 70% 1fr; 
+  grid-template-columns: 1fr 50% 1fr; 
   grid-template-rows: 1fr; 
   gap: 0px 0px; 
   align-items: center;
@@ -629,15 +660,15 @@ transition-duration: 0.2s;
   
   button.takeaction {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    width: 140;
-    height: 40;
-    background-color: red;
+    font-weight: 500;
+    width: 270px;
+    height: 90px;
+    background-color: black;
     color: white;
-    font-size: 17px;
+    font-size: 35px;
     border-style: solid;
     grid-area: button;
-    margin-right: 100px;
+    margin-right: 20px;
     position: relative;
     transition-duration: 0.2s;
   }
@@ -650,16 +681,19 @@ transition-duration: 0.2s;
   }
   
   img.logo {
-    width: 55px;
-    height: 70px;
+    width: 105px;
+    height: 120px;
     margin-left: 30px;
     grid-area: logo;
+    animation-duration: 5s;
   }
   
   .SplashWrapper {
   margin-top: 120px;
   width: 100%;
   max-width: 1200px;
+  zoom: 1.5;
+  -moz-transform: scale(1.5);
   display: grid; 
   align-items:center;
   align-content: start;
@@ -669,11 +703,11 @@ transition-duration: 0.2s;
   grid-template-areas: 
     "pt pt pt"
     "text right right"
-    "left left ."; 
-      
+    "left . ."; 
+  
   }
   h1 {
-    font-size: 100px;
+    font-size: 80px;
   }
   
   h1.ps {
@@ -681,15 +715,15 @@ transition-duration: 0.2s;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     left: 0;
-    margin: 0 0 15px 50px;
-
+    margin: 0 0 0px 20px;
     align-self: baseline;
   }
 
   .realimg {
     grid-area: text;
     left: 0;
-    margin-left: 50px;
+    margin: 0 0 30px 20px;
+
   }
   
   /*
@@ -720,20 +754,20 @@ transition-duration: 0.2s;
   
   img.rightblob{
     grid-area: right;
-    width: 750px;
+    width: 80%;
     height: 140px;
     border-radius: 90px 0 0 90px;
     object-fit: cover;
-    content:url(https://images.unsplash.com/photo-1597254512641-c0141c25f32c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHNoYXJrc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60);
+    content:url("https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGxhc3RpYyUyMHBvbGx1dGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60");
   }
 
   img.leftblob{
     grid-area: left;
-    width: 626px;
+    width: 150%;
     height: 137px;
     border-radius: 0 90px 90px 0;
     object-fit: cover;
-    content:url("https://images.unsplash.com/photo-1573551089778-46a7abc39d9f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHR1cnRsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60");
+    content:url("https://images.unsplash.com/photo-1509747129352-c4244f0b9bf9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHR1cnRsZSUyMHBsYXN0aWN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60");
   }
   
   .slide-in-fromleft {
@@ -781,7 +815,7 @@ transition-duration: 0.2s;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 38px;
+    font-size: 48px;
   }
   
   .Article-car { 
@@ -789,6 +823,8 @@ transition-duration: 0.2s;
   }
   
   .Article-layout {
+    zoom: 2;
+    -moz-transform: scale(2);
     max-width:330px;
     width: 330px;
     height:445;
@@ -861,8 +897,11 @@ transition-duration: 0.2s;
     opacity: 100;
     transition-duration: 0.5s;
   }
+
   
   .poster-wrapper{
+    zoom:1.5;
+    -moz-transform: scale(1.5);
     width: 100%;
     margin: 0 auto;
     position: relative;
@@ -915,7 +954,8 @@ transition-duration: 0.2s;
   }
   
   .poster{
-    width: 50%;
+
+    width: 60%;
     height: auto;
     grid-area: poster;
     box-shadow: 0 0 0px 13.337629318237305px rgba(0, 0, 0, 1);

@@ -1,19 +1,20 @@
 <html>
     <head>
         <link rel="stylesheet" href="./stylesheet.css">
+        <link rel="icon" type="image/x-icon" href="logo.svg">
     </head>
     <body>
         <div class="navbar">
             <img class="logo" src="logo.svg" />
             <title>PlasticSharks</title>
-            <button class="takeaction">Take Action</button>
+            <button class="takeaction" onclick="document.getElementById('poster').scrollIntoView();">Take Action</button>
         </div>
         <div class="spacerwhite"></div>
         <div class="SplashWrapper">
             <h1 class="ps slide-in-fromright">Plastic Sharks</h1>
             <img class="smallblob slide-in-fromleft" src="smallblob.svg" alt="">
             <h1 class="ar slide-in-fromleft">aren't</h1>
-            <img class="realimg ar slide-in-fromleft" src="arrl.png">
+            <img class="realimg ar slide-in-fromleft" src="arrl.svg">
             <img class="rightblob slide-in-fromright" src="rightblob.png" alt="">
             <h1 class="rl slide-in-fromright">Real.</h1>
             <img class="leftblob slide-in-fromleft" src="leftblob.png" alt="">
@@ -22,7 +23,7 @@
         <div class="Article-Wrapper">
             <div class="Article-Paragraph">
                 <p>
-                We’re surprisingly small nonprift with outrageously large ambitons.
+                We’re a surprisingly small non-profit with outrageously large ambitons.
                 </p>
                 <p>
                 we aren’t just an organisation but a dream. 
@@ -50,7 +51,7 @@
             </div>
         </div>
 
-        <div class="poster-wrapper">
+        <div class="poster-wrapper" id="poster">
             <img class="poster" src="Poster.jpg" alt="Shark Poster">
             <div class="poster-content" >
             <h1 class="poster-title">
@@ -64,7 +65,7 @@
 
                 We want it to be spread across the world, shouted from the roof tops and worn on <br/>t-shirts.<br/>
                 <br/>
-                <button class="poster-dl">Download</button>
+                <Button class="poster-dl"><a class="pd" href="poster.jpg" download>Download</a></Button>
             </p>
             </div>
         </div>
