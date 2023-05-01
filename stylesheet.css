@@ -289,13 +289,13 @@ transition-duration: 0.2s;
   padding: 40px;
 }
 
-@media only screen and(min-width: 1440px) {
+@media only screen and(min-width: 1200px) {
   .realimg{ visibility: hidden;width: 0px;height: 0px;}
   div.spacerwhite{ visibility: hidden;width: 0px;height: 0px;}
 }
 
 
-@media only screen and (max-width: 1400px) and (min-width: 455px) {
+@media only screen and (max-width: 1200px) and (min-width: 455px) {
   .navbar {
   display: grid; 
   grid-template-columns: 1fr 70% 1fr; 
