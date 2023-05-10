@@ -2,14 +2,43 @@
     <head>
         <link rel="stylesheet" href="./stylesheet.css">
         <link rel="icon" type="image/x-icon" href="logo.svg">
-        <!-- Latest Version -->
-<script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js" type="text/javascript"></script>
-<script>
-var config = {
-  apiKey: '42541c51ae5abe45f4d73cc888cad7e1c9524270',
-  product: 'PRO_MULTISITE',
-};
+        <script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js"></script>
+        <script>
+            var config = {
+            apiKey: '42541c51ae5abe45f4d73cc888cad7e1c9524270',
+            product: 'community',
+                optionalCookies: [
+                    {
+                        name: 'analytics',
+                        label: 'Analytics',
+                        description: '',
+                        cookies: [],
+                        onAccept : function(){},
+                        onRevoke: function(){}
+                    },{
+                        name: 'marketing',
+                        label: 'Marketing',
+                        description: '',
+                        cookies: [],
+                        onAccept : function(){},
+                        onRevoke: function(){}
+                    },{
+                        name: 'preferences',
+                        label: 'Preferences',
+                        description: '',
+                        cookies: [],
+                        onAccept : function(){},
+                        onRevoke: function(){}
+                    }
+                ],
 
+                position: 'RIGHT',
+                theme: 'DARK'
+            };
+
+            CookieControl.load( config );
+        </script>
+    
 CookieControl.load( config );
 </script>
     </head>
