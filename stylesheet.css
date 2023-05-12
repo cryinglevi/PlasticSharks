@@ -968,7 +968,7 @@ transition-duration: 0.2s;
   }
   
   .footer{
-    position: fixed;
+    position: relative;
     bottom: 0;
     margin-top: 200px;
     width: 100%;
